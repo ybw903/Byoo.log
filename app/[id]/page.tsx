@@ -1,4 +1,4 @@
-import { getPostContent } from "@/src/features/content/api";
+import { getPostContent, getPostContents } from "@/src/features/content/api";
 import { MarkdownView } from "@/src/features/content/ui/MarkdownView";
 
 export async function generateMetadata({
@@ -15,6 +15,12 @@ export async function generateMetadata({
     title: postContent.title,
     description: postContent.summary,
   };
+}
+
+export async function generateStaticParams() {
+  const postContents = await getPostContents();
+
+  return postContents.map((postContent) => ({ id: postContent.id }));
 }
 
 export default async function ContentPage({
