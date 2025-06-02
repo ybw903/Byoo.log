@@ -38,6 +38,7 @@
   border-radius: 10px;
   background: rgba(115, 124, 153, 0.2);
   color: #1a1a1a;
+  @apply dark:text-neutral-200;
   padding: 0.15em 0.2em 0.05em;
   white-space: normal;
 }
