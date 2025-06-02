@@ -12,7 +12,7 @@ export const ContentList = async () => {
           key={`post-${idx}`}
           className="py-4 hover:scale-[1.005] will-change-transform scale-100 active:scale-100 duration-200 ease-in-out"
         >
-          <Link href={post.id}>
+          <Link href={`/${post.id}/`}>
             <article>
               <h2 className="text-2xl font-bold mb-2">{post.title}</h2>
               <p className="text-xs text-gray-500">{post.date}</p>
