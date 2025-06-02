@@ -1,5 +1,6 @@
 import { getPostContent, getPostContents } from "@/src/features/content/api";
 import { MarkdownView } from "@/src/features/content/ui/MarkdownView";
+import { GiscusComment } from "@/src/features/comment/ui/GiscusComment";
 
 export async function generateMetadata({
   params,
@@ -39,6 +40,7 @@ export default async function ContentPage({
         <h1 className="text-4xl font-bold">{postContent.title}</h1>
         <p className="mt-2 mb-8 text-xs text-gray-500">{postContent.date}</p>
         <MarkdownView markdownContent={postContent.content} />
+        <GiscusComment />
       </article>
     </main>
   );
