@@ -1,0 +1,117 @@
+.markdown {
+  line-height: 28px;
+}
+
+.markdown p {
+  @apply pb-5;
+}
+
+.markdown a:not(.tip):not(.linked-heading) {
+  @apply border-b-[1px] border-[--link] text-[--link];
+}
+
+.markdown hr {
+  @apply pt-8 opacity-60 dark:opacity-10;
+}
+
+.markdown h2 {
+  @apply mt-2 pb-8 text-3xl font-bold;
+}
+
+.markdown h3 {
+  @apply mt-2 pb-8 text-2xl font-bold;
+}
+
+.markdown h4 {
+  @apply mt-2 pb-8 text-xl font-bold;
+}
+
+.markdown :is(h1, h2, h3, h4) a:is(:hover, :focus, :active)::before,
+.markdown :is(h1, h2, h3, h4):is(:target, :focus) a::before {
+  content: "#";
+  position: absolute;
+  transform: translate(-1em);
+  opacity: 0.7;
+}
+
+.markdown :not(pre) > code {
+  border-radius: 10px;
+  background: rgba(115, 124, 153, 0.2);
+  color: #1a1a1a;
+  padding: 0.15em 0.2em 0.05em;
+  white-space: normal;
+}
+
+.markdown pre {
+  overflow-x: auto;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.markdown pre [data-line] {
+  padding: 0 1rem;
+}
+
+.markdown blockquote {
+  @apply relative -left-2 -ml-4 mb-8 pl-4;
+  font-style: italic;
+  border-left: 3px solid hsla(0, 0%, 0%, 0.9);
+  border-left-color: inherit;
+  opacity: 0.8;
+}
+
+.markdown blockquote p {
+  margin: 0;
+  padding: 0;
+}
+
+.markdown p img {
+  margin-bottom: 0;
+}
+
+.markdown ul:not(.unstyled) {
+  @apply list-inside md:list-outside list-disc;
+  margin-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-bottom: 1.75rem;
+  list-style-image: none;
+}
+
+.markdown li:not(.unstyled) {
+  margin-bottom: calc(1.75rem / 2);
+}
+
+.markdown img {
+  @apply mb-8;
+  max-width: 100%;
+}
+
+.markdown iframe {
+  @apply mb-8;
+  max-width: 100%;
+}
+
+.markdown ol {
+  @apply mb-8 list-inside md:list-outside list-decimal;
+}
+
+.markdown input {
+  color: #222;
+}
+
+.markdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.markdown th,
+.markdown td {
+  border: 1px solid #dcdcdc;
+  padding: 8px;
+  text-align: left;
+}
