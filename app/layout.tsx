@@ -21,6 +21,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Byoo.log`,
   },
+  verification: {
+    google: "0BW-eD27UKencfPvnJUel9FICKrudtn1HkEK3hK4MtE",
+  },
 };
 
 export default function RootLayout({
