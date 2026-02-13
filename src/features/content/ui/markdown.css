@@ -75,7 +75,7 @@
   @apply list-inside md:list-outside list-disc;
   margin-top: 0;
   padding-bottom: 0;
-  padding-left: 0;
+  padding-left: 20px;
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.75rem;
@@ -98,6 +98,14 @@
 
 .markdown ol {
   @apply mb-8 list-inside md:list-outside list-decimal;
+}
+
+.markdown li ol {
+  @apply pl-5;
+}
+
+.markdown ul ol {
+  @apply pl-5;
 }
 
 .markdown input {
