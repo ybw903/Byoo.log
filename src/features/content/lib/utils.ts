@@ -7,3 +7,7 @@ export const toWithoutContent = (post: IPost): Omit<IPost, "content"> => ({
   date: post.date,
   summary: post.summary,
 });
+
+export const sortByDate = (a: IPost, b: IPost) => {
+  return new Date(b.date).getTime() - new Date(a.date).getTime();
+};

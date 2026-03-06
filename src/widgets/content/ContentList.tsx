@@ -1,9 +1,11 @@
 import { getPostContents } from "@/src/features/content/api";
-import { toWithoutContent } from "@/src/features/content/lib/utils";
+import { sortByDate, toWithoutContent } from "@/src/features/content/lib/utils";
 import Link from "next/link";
 
 export const ContentList = async () => {
-  const postContents = (await getPostContents()).map(toWithoutContent);
+  const postContents = (await getPostContents())
+    .sort(sortByDate)
+    .map(toWithoutContent);
 
   return (
     <ul>
